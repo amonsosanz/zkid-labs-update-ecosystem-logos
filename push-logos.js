@@ -1,9 +1,10 @@
+require("dotenv").config();
+
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 
-const SERVER_URL = "http://localhost:3007/organizations";
-const TOKEN = "";
+const { SERVER_URL, TOKEN } = process.env;
 const LOGO_DIRECTORY = "./export";
 
 const logoIds = require("./logo_ids.json");
@@ -31,7 +32,7 @@ fs.readdir(LOGO_DIRECTORY, async (err, files) => {
 
         try {
           const response = await axios.patch(
-            `${SERVER_URL}/${logoId}`,
+            `${SERVER_URL}/organizations/${logoId}`,
             {
               logo: base64EncodedLogo,
             },

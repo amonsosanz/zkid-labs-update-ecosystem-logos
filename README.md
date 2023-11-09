@@ -16,4 +16,4 @@ All the logos are stored in the GIMP file `all-logos-gimp-project.xcf`. Add new 
 Some notes:
 
  * The name of the layer in GIMP must match the name of the organization in `logo_ids.json` but **removing all the dots (.)**.
- * When exporting, make sure the option "Use layer size" is selected in the plugin, so all exported PNGs are 400x400.
+ * When exporting, make sure the option "Use layer size" is **NOT selected** in the plugin, so all exported PNGs are 400x400.
